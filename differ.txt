@@ -1,1 +1,3 @@
 Does it double up on localhost?
+
+Trying again on both local and staging. Tried to make it racier.
