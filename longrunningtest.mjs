@@ -1,6 +1,6 @@
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const ms = 1000 * 60 * 1;
+const ms = 1000 * 60 * 30;
 // Math.floor(Math.random() * 1000 * 30);
 
 console.log(`Sleeping for ${ms / 1000}s...`);
