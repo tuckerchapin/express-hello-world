@@ -5,3 +5,4 @@ const ms = Math.floor(Math.random() * 1000 * 30);
 console.log(`Sleeping for ${ms / 1000}s...`);
 await sleep(ms);
 console.log("Done dummy test");
+throw new Error("Dummy test error");
