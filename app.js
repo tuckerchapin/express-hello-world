@@ -16,7 +16,6 @@ const html = `
 <html>
   <head>
     <title>Hello from Render!</title>
-    <!--
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
       setTimeout(() => {
@@ -28,7 +27,6 @@ const html = `
         });
       }, 500);
     </script>
-    -->
     <style>
       @import url("https://p.typekit.net/p.css?s=1&k=vnd5zic&ht=tk&f=39475.39476.39477.39478.39479.39480.39481.39482&a=18673890&app=typekit&e=css");
       @font-face {
@@ -68,10 +66,10 @@ const html = `
   </head>
   <body>
     <section>
-      <!--
       Hello from Render!
-      -->
+      <!--
       This build <i>broke</i> 😭
+      -->
     </section>
   </body>
 </html>
