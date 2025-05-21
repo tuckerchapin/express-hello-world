@@ -52,11 +52,24 @@ const html = `
         margin-right: -50%;
         transform: translate(-50%, -50%);
       }
+      i {
+        --p: 20px;
+        width: 200px;
+        padding-left: 25px;
+        display: inline-block;
+        clip-path: polygon(var(--p) 0, 100% 0, calc(100% - var(--p)) 100%, 0 100%);
+        background: crimson;
+        background-color: crimson;
+        color: white;
+      }
     </style>
   </head>
   <body>
     <section>
       Hello from Render!
+      <!--
+      This build <i>broke</i> 😭
+      -->
     </section>
   </body>
 </html>
