@@ -1,0 +1,27 @@
+name: Pending Status
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  statuses: write
+
+jobs:
+  set-pending:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set pending commit status
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            "/repos/${{ github.repository }}/statuses/${SHA}" \
+            -f state=pending \
+            -f context="auto-deploy-test/pending" \
+            -f description="Intentionally pending to block auto-deploy"
+      - name: Sleep before completing
+        run: sleep 3
