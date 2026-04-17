@@ -2,7 +2,7 @@ console.log("Dummy test");
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-shouldFail = false;
+let shouldFail = false;
 if (Math.random() > 0.5) {
   shouldFail = true;
   console.log("Test will fail");
