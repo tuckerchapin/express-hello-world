@@ -23,5 +23,5 @@ jobs:
             -f state=success \
             -f context="auto-deploy-test/pending" \
             -f description="Immediately set to success for testing"
-      - name: Sleep before completing
-        run: sleep 3
+      # - name: Sleep before completing
+      #   run: sleep 3
