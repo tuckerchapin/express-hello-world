@@ -7,7 +7,7 @@ const ms = Math.floor(Math.random() * 1000 * 30);
 console.log(`Sleeping for ${ms / 1000}s...`);
 await sleep(ms);
 
-throw new Error("This commit is breaking");
-// console.log("Dummy test passed!");
-
-// console.log("Dummy test passed!");
+if (Math.random() > 0.5) {
+  throw new Error("Dummy test failed!");
+}
+console.log("Dummy test passed!");
