@@ -20,8 +20,8 @@ jobs:
             --method POST \
             -H "Accept: application/vnd.github+json" \
             "/repos/${{ github.repository }}/statuses/${SHA}" \
-            -f state=failure \
+            -f state=success \
             -f context="auto-deploy-test/pending" \
-            -f description="Immediately set to failure for testing"
+            -f description="Immediately set to success for testing"
       - name: Sleep before completing
         run: sleep 3
